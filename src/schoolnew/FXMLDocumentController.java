@@ -10,7 +10,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.image.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -23,7 +25,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
+        //System.out.println(((Button)event.getSource()).getText());
+        //System.out.println(((Button)event.getSource()).getId());
+        JOptionPane.showMessageDialog(null, ((Button)event.getSource()).getId(), "Button id clicked", JOptionPane.INFORMATION_MESSAGE);
         //label.setText("Hello World!");
     }
 

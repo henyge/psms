@@ -29,7 +29,7 @@
                                         <Label text="%login.head" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
                                         <TextField fx:id="login_email" promptText="Email" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
                                         <PasswordField fx:id="login_pass" promptText="%login.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                                        <Button text="%login" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                        <Button fx:id="btnLogin" text="%login" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#handleButtonAction">
                                             <styleClass>
                                                 <String fx:value="btn"/>
                                                 <String fx:value="primary"/>
@@ -43,7 +43,7 @@
                                         <Label text="%forgot.head" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
                                         <TextField fx:id="forget_email" promptText="Email" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
                                         <Label GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                                        <Button text="%recover" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                        <Button fx:id="btnRecover" text="%recover" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#handleButtonAction">
                                             <styleClass>
                                                 <String fx:value="btn"/>
                                                 <String fx:value="danger"/>
@@ -58,7 +58,7 @@
                                         <PasswordField fx:id="register_pass" promptText="%login.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
                                         <PasswordField fx:id="register_rpass" promptText="%register.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
                                         
-                                        <Button text="%register" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                        <Button fx:id="btnRegister" text="%register" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#handleButtonAction">
                                             <styleClass>
                                                 <String fx:value="btn"/>
                                                 <String fx:value="success"/>

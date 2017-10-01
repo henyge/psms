@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="AnchorPane" style="-fx-padding: 6 6 6 6; -fx-background-color:#c5dbec;" stylesheets="@bootstrap3.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schoolnew.FXMLDocumentController">
+    <top>
+        <HBox alignment="topCenter" spacing="6" style="-fx-padding: 15 0 0 0">
+            <children>
+                <ImageView fx:id="pTitle" fitHeight="61" fitWidth="750" ></ImageView>
+            </children>
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox alignment="center" spacing="6">
+            <HBox alignment="center" spacing="6">
+                <TitledPane prefWidth="300.0" styleClass="primary" text="%login.title">
+                    <StackPane minHeight="0.0" minWidth="0.0" >
+                        <HBox prefWidth="868.0" spacing="10.0" style="">
+                            <TabPane side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+                                <Tab text="%login">
+                                    <GridPane alignment="center" vgap="10" >
+                                        <Label text="%login.head" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+                                        <TextField promptText="Email" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                        <PasswordField promptText="%login.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                        <Button text="Login" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                            <styleClass>
+                                                <String fx:value="btn"/>
+                                                <String fx:value="primary"/>
+                                            </styleClass>
+                                        </Button>
+                                        <Separator prefWidth="290.0" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                    </GridPane>
+                                </Tab>
+                                <Tab text="%forgot">
+                                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                                        <Label text="Forgot Password tabpane"/>
+                                    </AnchorPane>
+                                </Tab>
+                                <Tab text="%register">
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" >
+                                        <Label text="Register tabpane"/>
+                                    </AnchorPane>
+                                </Tab>
+                            </TabPane>
+                        </HBox>
+                    </StackPane>
+                </TitledPane>           
+            </HBox>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <ToolBar>
+            <Label text="2017 (c) Pricom ERP-Software, v.1.4.0"/>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="1.0"/>
+            <Label text="%app.licence"/>
+        </ToolBar>
+    </bottom>
+</BorderPane>

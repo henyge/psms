@@ -27,9 +27,9 @@
                                 <Tab text="%login">
                                     <GridPane alignment="center" vgap="10" >
                                         <Label text="%login.head" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
-                                        <TextField promptText="Email" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                        <PasswordField promptText="%login.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                                        <Button text="Login" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                        <TextField fx:id="login_email" promptText="Email" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                        <PasswordField fx:id="login_pass" promptText="%login.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                        <Button text="%login" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
                                             <styleClass>
                                                 <String fx:value="btn"/>
                                                 <String fx:value="primary"/>
@@ -39,14 +39,33 @@
                                     </GridPane>
                                 </Tab>
                                 <Tab text="%forgot">
-                                    <AnchorPane minHeight="0.0" minWidth="0.0">
-                                        <Label text="Forgot Password tabpane"/>
-                                    </AnchorPane>
+                                    <GridPane alignment="center" vgap="10" >
+                                        <Label text="%forgot.head" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+                                        <TextField fx:id="forget_email" promptText="Email" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                        <Label GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                        <Button text="%recover" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                            <styleClass>
+                                                <String fx:value="btn"/>
+                                                <String fx:value="danger"/>
+                                            </styleClass>
+                                        </Button>
+                                        <Separator prefWidth="290.0" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                    </GridPane>
                                 </Tab>
                                 <Tab text="%register">
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" >
-                                        <Label text="Register tabpane"/>
-                                    </AnchorPane>
+                                    <GridPane alignment="center" vgap="10" >
+                                        <TextField fx:id="register_email" promptText="Email" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+                                        <PasswordField fx:id="register_pass" promptText="%login.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                        <PasswordField fx:id="register_rpass" promptText="%register.pass" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                        
+                                        <Button text="%register" prefWidth="290.0"  GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                            <styleClass>
+                                                <String fx:value="btn"/>
+                                                <String fx:value="success"/>
+                                            </styleClass>
+                                        </Button>
+                                        <Separator prefWidth="290.0" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                    </GridPane>
                                 </Tab>
                             </TabPane>
                         </HBox>

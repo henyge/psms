@@ -22,14 +22,12 @@ import javafx.stage.Screen;
  * @author henyge
  */
 public class Schoolnew extends Application {
-    Locale locale;
-    ResourceBundle bundle;
     
     @Override
     public void start(Stage stage) throws Exception {
-        locale = new Locale("en", "GB");
-        bundle = ResourceBundle.getBundle("resources/captions", locale);
-
+        Locale locale = new Locale("en", "GB");
+        ResourceBundle bundle = ResourceBundle.getBundle("resources/captions", locale);
+        
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"), bundle);
         
         Scene scene = new Scene(root);

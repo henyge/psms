@@ -16,7 +16,7 @@
                 <BorderPane>
                     <left>
                         <VBox fx:id="logoCon" spacing="6" style="-fx-padding: 6 13 6 13;">
-                            <TilePane alignment="topCenter" prefColumns="1" hgap="-10" vgap="0">
+                            <TilePane alignment="topCenter" prefColumns="1" hgap="-20" vgap="0">
                                 <ImageView fx:id="pTitle" fitWidth="70" fitHeight="40" ></ImageView>
                                 <Text text="ERP Software v1.5.0" />
                             </TilePane>

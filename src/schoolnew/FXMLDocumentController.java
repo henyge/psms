@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.*;
@@ -28,9 +29,6 @@ public class FXMLDocumentController implements Initializable {
     private ImageView pTitle;
     
     @FXML
-    private Schoolnew sn;
-    
-    @FXML
     private Button btnLogin;
     
     private Stage stage;
@@ -43,8 +41,10 @@ public class FXMLDocumentController implements Initializable {
             stage = (Stage) btnLogin.getScene().getWindow();
             AnchorPane root;
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("FXMLMainPanel.fxml"));
+            
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            //stage.sizeToScene();
         }
     }
 

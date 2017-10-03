@@ -4,12 +4,50 @@
 <?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schoolnew.FXMLMainPanelController">
-    <stylesheets>
-        <URL value="@bootstrap3.css"/>
-    </stylesheets>
-    <Label text="Hello, I am the main page..." />
+<AnchorPane stylesheets="@bootstrap3.css" style="-fx-padding: 6 6 6 6; -fx-background-color:#c5dbec;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schoolnew.FXMLMainPanelController" >
+    <VBox fx:id="mainContainer" alignment="topCenter" spacing="6" style="-fx-padding: 6 25 4 25;">
+        <BorderPane fx:id="cols">
+            <top>
+                <BorderPane>
+                    <left>
+                        <VBox fx:id="logoCon" spacing="6" style="-fx-padding: 6 13 6 13;">
+                            <TilePane alignment="topCenter" prefColumns="1" hgap="-10" vgap="0">
+                                <ImageView fx:id="pTitle" fitWidth="70" fitHeight="40" ></ImageView>
+                                <Text text="ERP Software v1.5.0" />
+                            </TilePane>
+                        </VBox>
+                    </left>
+                    <center>
+                        <HBox alignment="topCenter" spacing="6" style="-fx-padding: 6 6 6 6;-fx-background-image: url('/assets/banner_bg.png');-fx-background-size:stretch;">
+                            <Label text="Address" />
+                        </HBox>
+                    </center>
+                </BorderPane> 
+            </top>
+            <center>
+                <VBox alignment="center" style="-fx-background-color:#e6e6fa;">
+                    <Label text="Main Content" />
+                    
+                </VBox>
+            </center>
+            <left>
+                <VBox fx:id="mainMenuCon" alignment="topCenter" style="-fx-background-color:white;-fx-padding:6 6 6 6;">
+                    <Label text="Main menu" />
+                    <Separator orientation="HORIZONTAL" prefHeight="1.0" prefWidth="0.0"/>
+                </VBox>
+            </left>
+            <bottom>
+                <ToolBar prefHeight="44.0" >
+                    <Label text="Signed in as : Admin"/>
+                    <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="1.0"/>
+                    <Label text="Other Status information"/>
+                </ToolBar> 
+            </bottom>
+        </BorderPane>
+    </VBox>
 </AnchorPane>
